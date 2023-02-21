@@ -1,0 +1,80 @@
+body {
+background-image: url('https://i.imgur.com/livljOu.jpeg');
+background-size: cover;
+background-position: center;
+font-family: 'Roboto', sans-serif;
+margin: 0;
+}
+
+
+
+
+
+.top-banner {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	position: relative;
+	z-index: 1;
+	animation-name: slideUp;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	height: 30px;
+	animation: none;
+}
+
+.banner-text {
+	display: inline-block;
+	width: 80%;
+	font-size: 28px;
+}
+
+.banner-close {
+	display: inline-block;
+	width: 20%;
+	text-align: right;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.close-button {
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #fff;
+	padding: 2.5px;
+	border-radius: 3px;
+	font-size: 20px;
+	background-color: #ff0000;
+}
+
+.close-button:hover {
+	transform: translateY(-3px);
+}
+
+.top-banner.closed {
+	height: 0;
+	padding: 0;
+	border: none;
+	box-shadow: none;
+}
+
+.top-banner.closed .banner-text {
+	display: none;
+}
+
+.top-banner.closed .banner-close {
+	display: none;
+}
+
+.content {
+	padding: 50px;
+	margin-top: 100px;
+}
+
+@keyframes slideUp {
+	from { height: 60px; }
+	to { height: 0; }
+}
